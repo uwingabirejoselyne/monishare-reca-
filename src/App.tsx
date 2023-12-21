@@ -1,4 +1,5 @@
 import { configure } from 'axios-hooks'
+import Layout from './components/Layout'
 import {
   RouterProvider,
   createBrowserRouter,
@@ -13,11 +14,9 @@ configure({
     autoCancel: false,
   },
 })
-const router = createBrowserRouter(createRoutesFromElements(
-<Route>
-  
-</Route>
-))
+const router = createBrowserRouter(
+  createRoutesFromElements(<Route element={<Layout />} errorElement={'hhh'}></Route>),
+)
 
 export default function App() {
   return (
