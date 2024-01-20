@@ -1,17 +1,8 @@
-import CarsIcon from '../assets/CarsIcon'
-import ProfileIcon from '../assets/ProfileIcon'
-
 const Navigation = () => (
-  <div>
-    <div>
-      <h2>Menu</h2>
-    </div>
-    <div>
-      <CarsIcon />
-    </div>
-    <div>
-      <ProfileIcon />
-    </div>
+  <div className="bg-indigo-tertiary">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non magni voluptates adipisci
+    distinctio consequatur culpa exercitationem id quo quas? Distinctio culpa natus qui veniam at
+    saepe magni vitae quo. Officiis?
   </div>
 )
 
