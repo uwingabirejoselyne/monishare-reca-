@@ -7,8 +7,7 @@ import {
   createRoutesFromElements,
   Route,
 } from 'react-router-dom'
-import Home from './pages/Home'
-
+import LandingPage from './pages/LandingPage'
 // Configure axios hooks
 // Do not delete this if you want to use the provided API hooks in src/hooks
 configure({
@@ -20,7 +19,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<Layout />} errorElement={'hhh'}>
       <Route path="user" element={<ProtectedRoutes />}>
-        <Route index element={<Home />} />
+        <Route index element={<LandingPage />} />
       </Route>
     </Route>,
   ),
