@@ -1,22 +1,19 @@
-import useGetUserName from '../hooks/useGetUserName'
-import { useReadLocalStorage } from 'usehooks-ts'
+import Button from '../components/UI/Button'
 
-const LandingPage = () => {
-  const userId = useReadLocalStorage('userId')
-  const userName = useGetUserName(Number(userId))
-
-  return (
-    <div>
-      <p className="flex flex-col items-center pt-24 font-lora text-5xl text-white">
-        <span className="font-bold uppercase">MONI</span>
-        <span className="font-medium italic">Share</span>
-      </p>
-      <p>
-        <span>Start Sharing Your Monis{userName}</span>
-        <span></span>
-      </p>
-    </div>
-  )
-}
+const LandingPage = () => (
+  <div className="flex flex-col gap-10 px-4">
+    <p className="flex flex-col items-center pt-24 font-lora text-5xl text-white">
+      <span className="font-bold uppercase">moni</span>
+      <span className="font-medium italic">share</span>
+    </p>
+    <p className="flex flex-col items-center truncate py-10 font-lora text-xl font-thin text-white sm:px-14 sm:text-2xl">
+      <span>Start Sharing Your Monis</span>
+      <span>wiht the world</span>
+    </p>
+    <Button color="filled" className="mx-auto w-full max-w-md">
+      Log in
+    </Button>
+  </div>
+)
 
 export default LandingPage
