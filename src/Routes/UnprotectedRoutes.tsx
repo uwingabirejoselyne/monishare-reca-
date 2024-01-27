@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 
-const ProtectedRoutes = () => (
+const UnprotectedRoutes = () => (
   <>
     <Navigation />
     <Outlet />
   </>
 )
 
-export default ProtectedRoutes
+export default UnprotectedRoutes

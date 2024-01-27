@@ -1,6 +1,6 @@
 import { configure } from 'axios-hooks'
 import Layout from './components/Layout'
-import ProtectedRoutes from './Routes/ProtectedRoutes'
+import UnprotectedRoutes from './Routes/UnprotectedRoutes'
 import {
   RouterProvider,
   createBrowserRouter,
@@ -8,6 +8,7 @@ import {
   Route,
 } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
+import Login from './pages/Login'
 // Configure axios hooks
 // Do not delete this if you want to use the provided API hooks in src/hooks
 configure({
@@ -18,8 +19,9 @@ configure({
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<Layout />} errorElement={'hhh'}>
-      <Route path="user" element={<ProtectedRoutes />}>
+      <Route path="/" element={<UnprotectedRoutes />}>
         <Route index element={<LandingPage />} />
+        <Route path="login" element={<Login />} />
       </Route>
     </Route>,
   ),
