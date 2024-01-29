@@ -5,7 +5,7 @@ export interface ButtonProps extends PropsWithChildren<ButtonHTMLAttributes<HTML
   color?: 'filled' | 'outlined' | 'danger'
 }
 
-export interface InputProps extends PropsWithChildren<InputHTMLAttributes<HTMLInputElement>> {
+export interface TextInputProps extends PropsWithChildren<InputHTMLAttributes<HTMLInputElement>> {
   name:
     | 'name'
     | 'type'
