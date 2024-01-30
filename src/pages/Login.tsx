@@ -6,9 +6,11 @@ import TextInputField from '../components/UI/TextInputField'
 import ProfileIcon from '../assets/ProfileIcon'
 import KeyIcon from '../assets/KeyIcon'
 import Button from '../components/UI/Button'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const { register } = useForm<LoginValues>({ resolver: zodResolver(loginValidationSchema) })
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center pt-20">
       <p className="flex flex-col items-center pt-24 font-lora text-5xl text-white ">
@@ -43,7 +45,12 @@ const Login = () => {
               </TextInputField>
             </div>
           </div>
-          <Button type="submit" color="filled" className="mx-auto mt-8 w-full max-w-md">
+          <Button
+            type="submit"
+            color="filled"
+            className="mx-auto mt-8 w-full max-w-md"
+            onClick={() => navigate('/user/home')}
+          >
             Login
           </Button>
         </form>
